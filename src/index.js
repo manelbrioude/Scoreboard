@@ -54,14 +54,27 @@ class ScoreBoard {
         (a, b) => b.homeScore + b.awayScore - (a.homeScore + a.awayScore)
       );
   
-      const summary = sortedMatches.map((match) => ({
-        homeTeam: match.homeTeam,
-        awayTeam: match.awayTeam,
-        homeScore: match.homeScore,
-        awayScore: match.awayScore,
-      }));
+      const summary = sortedMatches.map((match) => 
+      `${match.homeTeam} ${match.homeScore} - ${match.awayTeam} ${match.awayScore}`);
   
       return summary;
+    }
+
+    addFinishedGame(gameStrings) {
+        gameStrings.forEach(gameString => {
+        const [teams, scores] = gameString.split(":");
+        const [homeTeam, awayTeam] = teams.split(" - ");
+        const [homeScore, awayScore] = scores.split(" - ");
+    
+        const game = {
+          homeTeam,
+          awayTeam,
+          homeScore: parseInt(homeScore),
+          awayScore: parseInt(awayScore)
+        };
+    
+        this.finishedGames.push(game);
+      })
     }
   
     saveToLocalStorage() {
