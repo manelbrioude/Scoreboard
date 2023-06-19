@@ -62,19 +62,21 @@ class ScoreBoard {
 
     addFinishedGame(gameStrings) {
         gameStrings.forEach(gameString => {
-        const [teams, scores] = gameString.split(":");
-        const [homeTeam, awayTeam] = teams.split(" - ");
-        const [homeScore, awayScore] = scores.split(" - ");
-    
-        const game = {
-          homeTeam,
-          awayTeam,
-          homeScore: parseInt(homeScore),
-          awayScore: parseInt(awayScore)
-        };
-    
-        this.finishedGames.push(game);
-      })
+          const [teams, scores] = gameString.split(":");
+          const [homeTeam, awayTeam] = teams.split(" - ");
+          const [homeScore, awayScore] = scores.split(" - ");
+      
+          const game = {
+            homeTeam,
+            awayTeam,
+            homeScore: parseInt(homeScore),
+            awayScore: parseInt(awayScore)
+          };
+      
+          this.finishedGames.push(game);
+        });
+      
+        this.saveToLocalStorage();
     }
   
     saveToLocalStorage() {

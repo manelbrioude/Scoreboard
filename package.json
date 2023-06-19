@@ -1,5 +1,5 @@
 {
-  "name": "scoreboard",
+  "name": "scoreboardlibrary",
   "version": "1.0.0",
   "description": "Scoreboard library",
   "main": "index.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "(https://github.com/manelbrioude/Scoreboard.git)"
+    "url": "https://github.com/manelbrioude/Scoreboard.git"
   },
   "keywords": [
     "scoreboard"
