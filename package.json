@@ -1,0 +1,18 @@
+{
+  "name": "scoreboard",
+  "version": "1.0.0",
+  "description": "Scoreboard library",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "(https://github.com/manelbrioude/Scoreboard.git)"
+  },
+  "keywords": [
+    "scoreboard"
+  ],
+  "author": "Manel <manel_brioude@hotmail.com>",
+  "license": "ISC"
+}
