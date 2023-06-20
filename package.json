@@ -14,5 +14,12 @@
     "scoreboard"
   ],
   "author": "Manel <manel_brioude@hotmail.com>",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.5.0"
+  },
+  "dependencies": {
+    "mock-local-storage": "^1.1.24",
+    "scoreboardlibrary": "^1.0.0"
+  }
 }
